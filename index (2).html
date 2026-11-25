@@ -1,0 +1,1037 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sneha Waghamore Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['Sora', 'system-ui', 'sans-serif'],
+          sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        },
+        colors: {
+          ink: '#07060B',
+          char: '#121018',
+          mist: '#B3AFC4',
+          iris: '#8B5CF6',
+          lilac: '#C4B5FD',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root { color-scheme: dark; }
+  html { scroll-behavior: smooth; background: #07060B; }
+  body {
+    margin: 0;
+    background: #07060B;
+    color: #F3F1FA;
+    font-family: 'Inter', system-ui, sans-serif;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    overflow-x: hidden;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+    background: #07060B; z-index: 60;
+  }
+  #root { min-height: 100vh; position: relative; }
+  ::selection { background: rgba(139, 92, 246, .45); }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #C4B5FD; outline-offset: 3px; border-radius: 8px;
+  }
+
+  .glass {
+    background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+    border: 1px solid rgba(255,255,255,.09);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 40px -18px rgba(0,0,0,.8);
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #C4B5FD 0%, #8B5CF6 45%, #E879F9 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    box-shadow: 0 10px 30px -10px rgba(139,92,246,.8);
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  }
+  .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); box-shadow: 0 16px 36px -10px rgba(139,92,246,.95); }
+  .btn-ghost { transition: transform .25s ease, background .25s ease, border-color .25s ease; }
+  .btn-ghost:hover { transform: translateY(-2px); background: rgba(255,255,255,.08); border-color: rgba(196,181,253,.5); }
+
+  .bg-orb { position: fixed; border-radius: 9999px; filter: blur(110px); pointer-events: none; z-index: 0; }
+  .bg-grid {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .5;
+    background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 10%, transparent 70%);
+    mask-image: radial-gradient(ellipse at 50% 0%, #000 10%, transparent 70%);
+  }
+
+  .reveal { opacity: .4; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal-in { opacity: 1; transform: none; }
+  .fade-up { animation: fadeUp .9s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  .float { animation: float 6s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  .pop { animation: pop .25s ease both; }
+  @keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
+
+  .tilt { transition: transform .25s ease, border-color .25s ease; transform-style: preserve-3d; will-change: transform; }
+  .tilt::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s ease;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(167,139,250,.18), transparent 60%);
+  }
+  .tilt:hover { border-color: rgba(196,181,253,.45); }
+  .tilt:hover::after { opacity: 1; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal, .fade-up, .float, .pop { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
+    .tilt { transform: none !important; }
+  }
+</style>
+
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+
+<script type="text/plain" id="app-src">
+/* ============================================================
+   SNEHA S. WAGHAMORE — PORTFOLIO (React + TypeScript + Tailwind)
+   Everything you may want to edit lives in the CONFIG block below.
+   Icons are built-in inline SVGs (no external icon library needed).
+   ============================================================ */
+
+const { useState, useEffect, useRef } = React;
+
+/* ---------------------------- ICONS ---------------------------- */
+/* Inline SVG paths (Lucide-style, 24x24). Always render, no CDN needed. */
+
+const ICONS: Record<string, string> = {
+  Circle: '<circle cx="12" cy="12" r="10"/>',
+  Code2: '<path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>',
+  Server: '<rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/>',
+  Layout: '<rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/>',
+  Database: '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>',
+  Eye: '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+  Wrench: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  ScanLine: '<path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/>',
+  Sprout: '<path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>',
+  Bot: '<path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/>',
+  Sparkles: '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/>',
+  Rocket: '<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>',
+  Download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+  Mail: '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+  Linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>',
+  Github: '<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>',
+  User: '<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+  Brain: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v13"/>',
+  BrainCircuit: '<path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M9 13h2l1 1"/><path d="M15 9h-2l-1 1"/>',
+  Cpu: '<rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/>',
+  Puzzle: '<path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/>',
+  Info: '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>',
+  X: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+  Menu: '<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>',
+  CheckCircle2: '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
+  Briefcase: '<rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+  CalendarDays: '<rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/>',
+  GraduationCap: '<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>',
+  Network: '<rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/>',
+  Workflow: '<rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/>',
+  ChartNoAxesCombined: '<path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/>',
+  ChartLine: '<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/>',
+  Heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
+  ExternalLink: '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+  Copy: '<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+  Send: '<path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>',
+  ArrowUp: '<path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>',
+};
+
+/* ---------------------------- CONFIG ---------------------------- */
+
+interface Project {
+  id: string;
+  title: string;
+  tagline: string;
+  icon: string;
+  status?: string;
+  description: string;
+  stack: string[];
+  highlights: string[];
+  github: string; // TODO: paste the repository URL
+}
+
+const PROFILE = {
+  name: "Sneha S. Waghamore",
+  email: "snehaw2006@gmail.com",
+  linkedin: "https://www.linkedin.com/in/sneha-waghamore-85545628b",
+  github: "", // TODO: e.g. "https://github.com/your-username"
+  leetcode: "https://leetcode.com/u/sneha_1522",
+  resume: "https://claude.ai/artifact/VLzribWtUZcuCmmFPNgV7U", // TODO: swap for a public PDF link when you have one
+  photo: "./profile.png",
+};
+
+const NAV: [string, string][] = [
+  ["about", "About"], ["skills", "Skills"], ["projects", "Projects"], ["experience", "Experience"],
+  ["education", "Education"], ["certifications", "Certificates"], ["contact", "Contact"],
+];
+
+const SKILL_GROUPS: { label: string; icon: string; items: string[] }[] = [
+  { label: "Languages", icon: "Code2", items: ["Python", "Java", "SQL"] },
+  { label: "Backend", icon: "Server", items: ["Spring Boot", "REST APIs"] },
+  { label: "Frontend", icon: "Layout", items: ["Angular"] },
+  { label: "Databases", icon: "Database", items: ["MySQL", "PostgreSQL"] },
+  { label: "Computer Vision", icon: "Eye", items: ["OpenCV"] },
+  { label: "Tools", icon: "Wrench", items: ["Git", "GitHub", "Postman"] },
+];
+
+const PROJECTS: Project[] = [
+  {
+    id: "face-attendance",
+    title: "AI-Based Face Recognition Attendance System",
+    tagline: "Attendance that marks itself.",
+    icon: "ScanLine",
+    description:
+      "Automates the traditional attendance process. A webcam captures live video, the system recognizes registered students by their facial features, checks the timetable and marks attendance for the current class. Unknown faces are flagged as unauthorized.",
+    stack: ["Python", "OpenCV", "Deep Learning", "Computer Vision"],
+    highlights: [
+      "Captures live video through a webcam and detects faces in real time.",
+      "Recognizes registered students by comparing facial features with stored data.",
+      "Checks the timetable and automatically marks attendance for the corresponding class.",
+      "Outsider detection: an unknown person is identified as unauthorized and an alert is generated.",
+      "Reduces manual work, saves time and improves attendance accuracy.",
+    ],
+    github: "",
+  },
+  {
+    id: "farm2market",
+    title: "Farm2Market: Direct Access Between Farmers and Customers",
+    tagline: "No middlemen between the field and the table.",
+    icon: "Sprout",
+    description:
+      "A web application that lets farmers sell their products directly to customers, removing middlemen from the agricultural supply chain. Farmers set their own prices; customers browse and buy fresh produce at reasonable prices.",
+    stack: ["Java", "Spring Boot", "Angular", "MySQL", "REST APIs"],
+    highlights: [
+      "Farmers can register, log in, add agricultural products, manage product details and set their own prices.",
+      "Customers can browse available products, view prices and purchase directly from farmers.",
+      "MySQL database operations and RESTful APIs connect the Angular frontend with the Java backend.",
+      "Improves price transparency and helps farmers receive better prices for their products.",
+    ],
+    github: "",
+  },
+  {
+    id: "primus",
+    title: "PRIMUS: Zero-Knowledge Real-Time Learning AI Agent",
+    tagline: "A robot that learns by watching you.",
+    icon: "Bot",
+    status: "Ongoing",
+    description:
+      "An AI-powered robotic system that learns new tasks from human demonstrations instead of depending on large pre-trained datasets or hard-coded instructions. A person demonstrates a task, the system records and stores it, then executes it autonomously.",
+    stack: ["Python", "OpenAI API", "Robotics"],
+    highlights: [
+      "Teleoperation (TEL): control a robotic arm in real time using keyboard controls and record the movements.",
+      "Cognizant AI (CAI): handles user inputs, memory management, knowledge validation and autonomous task execution.",
+      "Applies Jacobian-based inverse kinematics to compute arm motion and reach target end-effector positions.",
+      "Memory-based module stores and retrieves learned procedures.",
+      "Zero-prior safety rules for reliable execution; one-shot imitation learning is being explored.",
+    ],
+    github: "",
+  },
+];
+
+const INTERNSHIP = {
+  role: "Software Trainee / Java Angular Full Stack Developer Intern",
+  company: "Infinitio Software Pvt. Ltd.",
+  period: "March 2025",
+  stack: ["Java", "Spring Boot", "Angular", "REST APIs", "MySQL", "Microservices", "Postman"],
+  points: [
+    "Built a scalable e-commerce application using Java, Spring Boot and a microservices architecture.",
+    "Developed backend modules for user authentication, product management and REST API integration.",
+    "Designed and optimized MySQL schemas to improve data storage and retrieval.",
+    "Integrated the Angular frontend with backend REST APIs for end-to-end functionality.",
+    "Tested and validated APIs with Postman to ensure reliable service communication.",
+  ],
+};
+
+const CERTIFICATIONS = [
+  {
+    title: "Deep Learning for Developers",
+    issuer: "Infosys Springboard",
+    icon: "Brain",
+    image: "./deep-learning.jpg"
+  },
+  {
+    title: "Networking Basics",
+    issuer: "Cisco Networking Academy",
+    icon: "Network",
+    image: "./networking-basics.jpg"
+  },
+  {
+    title: "Natural Language Processing using Python",
+    issuer: "Infosys Springboard",
+    icon: "BrainCircuit",
+    image: "./nlp.jpg"
+  },
+  {
+    title: "Overview of Agile & DevOps",
+    issuer: "Infosys Springboard",
+    icon: "Workflow",
+    image: "./agile-and-devops.jpg"
+  },
+  {
+    title: "Power BI for Beginners",
+    issuer: "Microsoft",
+    icon: "ChartNoAxesCombined",
+    image: "./power-bi.jpg"
+  },
+  {
+    title: "Data Analytics with Python",
+    issuer: "NPTEL — IIT Roorkee",
+    icon: "ChartLine",
+    image: "./data-analytics.jpg",
+    score: "Elite · 67%"
+  },
+  {
+    title: "Applied Positive Psychology",
+    issuer: "NPTEL — IIT Guwahati",
+    icon: "Heart",
+    image: "./positive-psychology.jpg",
+    score: "Elite · 91%"
+  }
+];
+
+/* --------------------------- HELPERS --------------------------- */
+
+const toast = (message: string) => window.dispatchEvent(new CustomEvent("app-toast", { detail: message }));
+
+const goTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+const Icon = ({ name, size = 18, className = "" }: { name: string; size?: number; className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor"
+    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`shrink-0 ${className}`} aria-hidden="true"
+    dangerouslySetInnerHTML={{ __html: ICONS[name] || ICONS.Circle }} />
+);
+
+const copyText = async (text: string, okMsg: string) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    toast(okMsg);
+    return true;
+  } catch (e) {
+    toast("Copy is blocked in this view. Select the text and copy it manually.");
+    return false;
+  }
+};
+
+/* ------------------------ REUSABLE UI ------------------------ */
+
+function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { setShown(true); io.disconnect(); }
+    }, { threshold: 0.1 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <div ref={ref} style={{ transitionDelay: `${delay}ms` }} className={`reveal ${shown ? "reveal-in" : ""} ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: React.ReactNode }) {
+  return (
+    <section id={id} className="scroll-mt-24 py-16 sm:py-24">
+      <Reveal>
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-lilac">{eyebrow}</p>
+        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
+      </Reveal>
+      <div className="mt-10">{children}</div>
+    </section>
+  );
+}
+
+function Chip({ children }: { children: React.ReactNode }) {
+  return <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[13px] text-[#E4E0F2]">{children}</span>;
+}
+
+type BtnProps = { children: React.ReactNode; icon?: string; variant?: "primary" | "ghost"; onClick?: () => void; href?: string; className?: string; type?: "button" | "submit" };
+
+function Btn({ children, icon, variant = "primary", onClick, href, className = "", type = "button" }: BtnProps) {
+  const base = `inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl px-5 text-sm font-semibold ${
+    variant === "primary" ? "btn-primary text-white" : "btn-ghost glass text-[#F3F1FA]"
+  } ${className}`;
+  const inner = (<>{icon && <Icon name={icon} size={16} />}{children}</>);
+  if (href) return <a href={href} target="_blank" rel="noopener noreferrer" className={base}>{inner}</a>;
+  return <button type={type} onClick={onClick} className={base}>{inner}</button>;
+}
+
+/* A link button that explains itself while its URL is still a placeholder. */
+function LinkBtn({ url, label, children, icon, variant = "ghost", className = "" }: { url: string; label: string; children: React.ReactNode; icon?: string; variant?: "primary" | "ghost"; className?: string }) {
+  if (url) return <Btn href={url} icon={icon} variant={variant} className={className}>{children}</Btn>;
+  return (
+    <Btn icon={icon} variant={variant} className={className}
+      onClick={() => toast(`${label} link isn't added yet. Add it in the CONFIG block at the top of the source.`)}>
+      {children}
+    </Btn>
+  );
+}
+
+function ToastHost() {
+  const [msg, setMsg] = useState("");
+  useEffect(() => {
+    let t: any;
+    const on = (e: Event) => {
+      setMsg((e as CustomEvent).detail as string);
+      clearTimeout(t);
+      t = setTimeout(() => setMsg(""), 3800);
+    };
+    window.addEventListener("app-toast", on);
+    return () => { window.removeEventListener("app-toast", on); clearTimeout(t); };
+  }, []);
+  if (!msg) return null;
+  return (
+    <div role="status" aria-live="polite" className="pop fixed bottom-6 left-1/2 z-[70] w-[min(92vw,460px)] -translate-x-1/2 rounded-xl border border-white/15 bg-[#1A1626]/95 px-4 py-3 text-sm shadow-2xl backdrop-blur"
+      style={{ marginBottom: "env(safe-area-inset-bottom, 0px)" }}>
+      {msg}
+    </div>
+  );
+}
+
+/* --------------------------- NAVBAR --------------------------- */
+
+function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const on = () => {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      setProgress(max > 0 ? (h.scrollTop / max) * 100 : 0);
+      setScrolled(h.scrollTop > 12);
+    };
+    on();
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
+  const go = (id: string) => { setOpen(false); goTo(id); };
+  return (
+    <header className={`sticky z-50 transition-colors ${scrolled || open ? "bg-ink/80 backdrop-blur-xl" : ""}`} style={{ top: "env(safe-area-inset-top, 0px)" }}>
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between">
+        <button type="button" onClick={() => go("top")} className="font-display text-lg font-bold tracking-tight">
+          Sneha<span className="gradient-text">.</span>
+        </button>
+        <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
+          {NAV.map(([id, label]) => (
+            <button key={id} type="button" onClick={() => go(id)} className="rounded-lg px-3 py-2 text-sm text-mist transition-colors hover:bg-white/5 hover:text-white">{label}</button>
+          ))}
+        </nav>
+        <button type="button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}
+          className="glass inline-flex h-11 w-11 items-center justify-center rounded-xl lg:hidden">
+          <Icon name={open ? "X" : "Menu"} size={20} />
+        </button>
+      </div>
+      {open && (
+        <nav aria-label="Mobile" className="pop mx-auto grid max-w-6xl gap-1 pb-4 lg:hidden">
+          {NAV.map(([id, label]) => (
+            <button key={id} type="button" onClick={() => go(id)} className="rounded-lg px-3 py-3 text-left text-[15px] text-[#E4E0F2] hover:bg-white/5">{label}</button>
+          ))}
+        </nav>
+      )}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-white/10">
+        <div className="h-full bg-gradient-to-r from-iris to-fuchsia-400" style={{ width: `${progress}%` }} />
+      </div>
+    </header>
+  );
+}
+
+/* ---------------------------- HERO ---------------------------- */
+
+function Hero() {
+  return (
+    <div id="top" className="grid items-center gap-12 pb-10 pt-10 sm:pt-16 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="min-w-0">
+        <span className="fade-up glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs text-lilac">
+          <Icon name="Sparkles" size={14} /> 4th-year BTech · AI &amp; ML · BMS Institute of Technology and Management
+        </span>
+        <h1 className="fade-up mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl" style={{ animationDelay: ".08s" }}>
+          Hi, I'm <span className="gradient-text">{PROFILE.name}</span>
+        </h1>
+        <p className="fade-up mt-5 font-display text-lg font-semibold text-[#E4E0F2] sm:text-2xl" style={{ animationDelay: ".16s" }}>
+          Aspiring Software Developer | AI &amp; ML Enthusiast
+        </p>
+        <p className="fade-up mt-5 max-w-xl text-base leading-relaxed text-mist sm:text-lg" style={{ animationDelay: ".24s" }}>
+          I build intelligent applications and scalable software solutions using Python, Java and modern technologies.
+        </p>
+        <div className="fade-up mt-8 flex flex-wrap gap-3" style={{ animationDelay: ".32s" }}>
+          <Btn icon="Rocket" onClick={() => goTo("projects")}>View My Projects</Btn>
+          <Btn icon="Download" variant="ghost" href={PROFILE.resume}>Download Resume</Btn>
+          <Btn icon="Mail" variant="ghost" onClick={() => goTo("contact")}>Contact Me</Btn>
+        </div>
+        <div className="fade-up mt-8 flex items-center gap-3" style={{ animationDelay: ".4s" }}>
+          <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="btn-ghost glass inline-flex h-11 w-11 items-center justify-center rounded-xl"><Icon name="Linkedin" size={18} /></a>
+          {PROFILE.github
+            ? <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="btn-ghost glass inline-flex h-11 w-11 items-center justify-center rounded-xl"><Icon name="Github" size={18} /></a>
+            : <button type="button" aria-label="GitHub" onClick={() => toast("GitHub link isn't added yet. Add it in the CONFIG block at the top of the source.")} className="btn-ghost glass inline-flex h-11 w-11 items-center justify-center rounded-xl"><Icon name="Github" size={18} /></button>}
+          <button type="button" aria-label="Copy email address" onClick={() => copyText(PROFILE.email, "Email address copied.")} className="btn-ghost glass inline-flex h-11 w-11 items-center justify-center rounded-xl"><Icon name="Mail" size={18} /></button>
+        </div>
+      </div>
+
+      <div className="fade-up mx-auto w-full max-w-[360px]" style={{ animationDelay: ".2s" }}>
+        <div className="float relative">
+          <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-iris via-fuchsia-500 to-indigo-500 opacity-40 blur-2xl" />
+          <div className="glass relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-[1.75rem] p-2">
+            {PROFILE.photo ? (
+              <img src={PROFILE.photo} alt={`Portrait of ${PROFILE.name}`} className="h-full w-full rounded-[1.4rem] object-cover" />
+            ) : (
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-[1.4rem] border border-dashed border-white/20 bg-white/[0.03] text-center">
+                <span className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-iris/50 to-fuchsia-500/30 ring-1 ring-white/20">
+                  <Icon name="User" size={44} className="text-white/90" />
+                </span>
+                <div>
+                  <p className="text-sm font-medium">Profile photo</p>
+                  <p className="mt-1 px-6 text-xs text-mist">Placeholder. Set <code className="rounded bg-white/10 px-1">PROFILE.photo</code> in the config.</p>
+                </div>
+              </div>
+            )}
+          </div>
+          <span className="glass absolute -left-3 top-8 rounded-xl px-3 py-1.5 text-xs font-medium text-lilac sm:-left-6">Python</span>
+          <span className="glass absolute -right-2 top-1/2 rounded-xl px-3 py-1.5 text-xs font-medium text-lilac sm:-right-6">Java</span>
+          <span className="glass absolute -bottom-3 left-10 rounded-xl px-3 py-1.5 text-xs font-medium text-lilac">OpenCV</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ---------------------------- ABOUT ---------------------------- */
+
+function About() {
+  const interests: [string, string][] = [
+    ["Code2", "Software development"],
+    ["BrainCircuit", "Artificial intelligence"],
+    ["Cpu", "Machine learning"],
+    ["Puzzle", "Problem-solving"],
+  ];
+  return (
+    <Section id="about" eyebrow="About me" title="Curious builder, steady problem-solver">
+      <div className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
+        <Reveal>
+          <div className="glass h-full rounded-2xl p-6 sm:p-8">
+            <p className="text-base leading-relaxed text-[#E4E0F2] sm:text-lg">
+              I'm a passionate engineering student pursuing BTech in Artificial Intelligence and Machine Learning at BMS Institute of Technology and Management, Bengaluru.
+              I enjoy software development, artificial intelligence, machine learning and the satisfaction of solving hard problems.
+            </p>
+            <p className="mt-4 leading-relaxed text-mist">
+              I've built full-stack applications with Java, Spring Boot, Angular and MySQL, and AI projects with Python and OpenCV.
+              I'm looking for internship and entry-level opportunities where I can keep learning and contribute to real products.
+            </p>
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
+          <div className="grid grid-cols-2 gap-4">
+            {interests.map(([icon, label]) => (
+              <div key={label} className="glass flex flex-col gap-3 rounded-2xl p-5 transition-transform duration-300 hover:-translate-y-1">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name={icon} size={20} /></span>
+                <span className="text-sm font-medium">{label}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </Section>
+  );
+}
+
+/* ---------------------------- SKILLS ---------------------------- */
+
+function Skills() {
+  return (
+    <Section id="skills" eyebrow="Technical skills" title="Tools I work with">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {SKILL_GROUPS.map((g, i) => (
+          <Reveal key={g.label} delay={i * 70}>
+            <div className="glass h-full rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-lilac/40">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name={g.icon} size={20} /></span>
+                <h3 className="font-display text-base font-semibold">{g.label}</h3>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {g.items.map((s) => <Chip key={s}>{s}</Chip>)}
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+/* --------------------------- PROJECTS --------------------------- */
+
+function ProjectCard({ p, onOpen }: { p: Project; onOpen: (p: Project) => void }) {
+  const ref = useRef<HTMLElement>(null);
+  const onMove = (e: React.PointerEvent<HTMLElement>) => {
+    const el = ref.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;
+    const y = (e.clientY - r.top) / r.height;
+    el.style.setProperty("--mx", `${x * 100}%`);
+    el.style.setProperty("--my", `${y * 100}%`);
+    if (e.pointerType === "mouse") {
+      el.style.transform = `perspective(900px) rotateX(${(0.5 - y) * 6}deg) rotateY(${(x - 0.5) * 8}deg) translateY(-4px)`;
+    }
+  };
+  const onLeave = () => { if (ref.current) ref.current.style.transform = ""; };
+  return (
+    <article ref={ref} onPointerMove={onMove} onPointerLeave={onLeave}
+      className="tilt glass relative flex h-full flex-col rounded-2xl p-6">
+      <div className="flex items-start justify-between gap-3">
+        <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-iris/40 to-fuchsia-500/20 text-white ring-1 ring-white/15"><Icon name={p.icon} size={24} /></span>
+        {p.status && <span className="rounded-full border border-lilac/40 bg-iris/15 px-3 py-1 text-xs font-medium text-lilac">{p.status}</span>}
+      </div>
+      <h3 className="mt-5 font-display text-lg font-semibold leading-snug">{p.title}</h3>
+      <p className="mt-1 text-sm text-lilac">{p.tagline}</p>
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-mist">{p.description}</p>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {p.stack.map((s) => <Chip key={s}>{s}</Chip>)}
+      </div>
+      <div className="relative z-10 mt-6 flex flex-wrap gap-3">
+        <Btn icon="Info" onClick={() => onOpen(p)} className="flex-1">Project Details</Btn>
+        <LinkBtn url={p.github} label={`${p.title} GitHub`} icon="Github" className="flex-1">GitHub</LinkBtn>
+      </div>
+    </article>
+  );
+}
+
+function ProjectModal({ p, onClose }: { p: Project; onClose: () => void }) {
+  const closeRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
+    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
+  }, []);
+  return (
+    <div className="fixed inset-0 z-[65] flex items-end justify-center bg-black/70 p-0 backdrop-blur-sm sm:items-center sm:p-6" onClick={onClose}>
+      <div role="dialog" aria-modal="true" aria-label={p.title} onClick={(e) => e.stopPropagation()}
+        className="pop glass relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-t-3xl bg-char p-6 sm:rounded-3xl sm:p-8"
+        style={{ background: "linear-gradient(160deg, #1B1727, #0E0C15)", paddingBottom: "max(24px, env(safe-area-inset-bottom, 0px))" }}>
+        <button ref={closeRef} type="button" onClick={onClose} aria-label="Close project details"
+          className="btn-ghost glass absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-xl"><Icon name="X" size={18} /></button>
+        <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-iris/40 to-fuchsia-500/20 ring-1 ring-white/15"><Icon name={p.icon} size={24} /></span>
+        <h3 className="mt-4 pr-12 font-display text-2xl font-bold leading-tight">{p.title}</h3>
+        <p className="mt-1 text-lilac">{p.tagline}</p>
+        <p className="mt-5 leading-relaxed text-[#E4E0F2]">{p.description}</p>
+        <h4 className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-mist">What it does</h4>
+        <ul className="mt-3 grid gap-3">
+          {p.highlights.map((h) => (
+            <li key={h} className="flex gap-3 text-sm leading-relaxed text-[#E4E0F2]">
+              <span className="mt-0.5 text-lilac"><Icon name="CheckCircle2" size={18} /></span>
+              <span>{h}</span>
+            </li>
+          ))}
+        </ul>
+        <h4 className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-mist">Tech stack</h4>
+        <div className="mt-3 flex flex-wrap gap-2">{p.stack.map((s) => <Chip key={s}>{s}</Chip>)}</div>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <LinkBtn url={p.github} label={`${p.title} GitHub`} icon="Github" variant="primary">View on GitHub</LinkBtn>
+          <Btn variant="ghost" onClick={onClose}>Close</Btn>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Projects() {
+  const [active, setActive] = useState<Project | null>(null);
+  return (
+    <Section id="projects" eyebrow="Featured projects" title="Things I've built">
+      <div className="grid gap-6 lg:grid-cols-3">
+        {PROJECTS.map((p, i) => (
+          <Reveal key={p.id} delay={i * 100} className="h-full">
+            <ProjectCard p={p} onOpen={setActive} />
+          </Reveal>
+        ))}
+      </div>
+      {active && <ProjectModal p={active} onClose={() => setActive(null)} />}
+    </Section>
+  );
+}
+
+/* -------------------------- EXPERIENCE -------------------------- */
+
+function Experience() {
+  return (
+    <Section id="experience" eyebrow="Internship experience" title="Hands-on full-stack work">
+      <Reveal>
+        <div className="glass relative rounded-2xl p-6 sm:p-8">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="flex min-w-0 items-start gap-4">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name="Briefcase" size={24} /></span>
+              <div className="min-w-0">
+                <h3 className="font-display text-xl font-semibold leading-snug">{INTERNSHIP.role}</h3>
+                <p className="mt-1 text-lilac">{INTERNSHIP.company}</p>
+              </div>
+            </div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-mist"><Icon name="CalendarDays" size={14} />{INTERNSHIP.period}</span>
+          </div>
+          <ul className="mt-6 grid gap-3">
+            {INTERNSHIP.points.map((t) => (
+              <li key={t} className="flex gap-3 text-[15px] leading-relaxed text-[#E4E0F2]">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-iris" />
+                <span>{t}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-6 flex flex-wrap gap-2">{INTERNSHIP.stack.map((s) => <Chip key={s}>{s}</Chip>)}</div>
+        </div>
+      </Reveal>
+    </Section>
+  );
+}
+
+/* -------------------------- EDUCATION -------------------------- */
+
+function Education() {
+  return (
+    <Section id="education" eyebrow="Education" title="Where I'm learning">
+      <div className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
+        <Reveal>
+          <div className="glass h-full rounded-2xl p-6 sm:p-8">
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name="GraduationCap" size={24} /></span>
+            <h3 className="mt-4 font-display text-xl font-semibold">BTech in Artificial Intelligence and Machine Learning</h3>
+            <p className="mt-1 text-lilac">BMS Institute of Technology and Management, Bengaluru</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Chip>2023 – 2027</Chip>
+              <Chip>CGPA 8.49</Chip>
+            </div>
+            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-mist">Relevant coursework</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {["Data Structures & Algorithms", "OOP", "DBMS", "Operating Systems", "Computer Networks", "Software Engineering", "Cloud Computing and Virtualization", "Artificial Intelligence", "Machine Learning", "NLP", "Deep Learning", "Data Analysis with Python"].map((c) => <Chip key={c}>{c}</Chip>)}
+            </div>
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
+          <div className="glass h-full rounded-2xl p-6 sm:p-8">
+            <h3 className="font-display text-lg font-semibold">Earlier schooling</h3>
+            <p className="mt-1 text-sm text-lilac">Swami Vivekanand Vidya Samasthe, Bagalkote</p>
+            <dl className="mt-5 grid gap-4 text-sm">
+              <div className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-3"><dt className="text-mist">Pre-University Course (2021 – 2023)</dt><dd className="font-semibold">95.33%</dd></div>
+              <div className="flex items-baseline justify-between gap-4"><dt className="text-mist">Class X (2020 – 2021)</dt><dd className="font-semibold">93.92%</dd></div>
+            </dl>
+          </div>
+        </Reveal>
+      </div>
+    </Section>
+  );
+}
+
+/* ------------------------- CERTIFICATIONS ------------------------- */
+
+function Certifications() {
+  const [selectedCertificate, setSelectedCertificate] = React.useState<any>(null);
+
+  return (
+    <>
+      <Section
+        id="certifications"
+        eyebrow="Certifications"
+        title="Courses I've completed"
+      >
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {CERTIFICATIONS.map((c, i) => (
+            <Reveal key={c.title} delay={(i % 3) * 80}>
+              <div className="glass group h-full overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-lilac/40">
+
+                {/* Certificate Thumbnail */}
+                <button
+                  type="button"
+                  onClick={() => setSelectedCertificate(c)}
+                  className="block w-full overflow-hidden border-b border-white/10 bg-black/20 p-3"
+                >
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    className="h-40 w-full rounded-lg object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
+                </button>
+
+                {/* Certificate Details */}
+                <div className="p-5">
+                  <div className="flex items-start gap-3">
+                    <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-iris/20 text-lilac"><Icon name={c.icon} size={18} /></span>
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-semibold leading-snug">{c.title}</h3>
+                      <p className="mt-1 text-sm text-mist">{c.issuer}</p>
+                    </div>
+                  </div>
+
+                  {c.score && (
+                    <span className="mt-3 inline-block rounded-full bg-lilac/10 px-3 py-1 text-xs text-lilac">
+                      {c.score}
+                    </span>
+                  )}
+
+                  <button
+                    type="button"
+                    onClick={() => setSelectedCertificate(c)}
+                    className="mt-4 flex items-center gap-2 text-sm font-medium text-lilac transition hover:opacity-80"
+                  >
+                    View Certificate
+                    <Icon name="Eye" size={15} />
+                  </button>
+                </div>
+
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* Certificate Modal */}
+      {selectedCertificate && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6"
+          onClick={() => setSelectedCertificate(null)}
+        >
+          <div
+            className="relative flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#111118] shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between gap-4 border-b border-white/10 px-4 py-3 sm:px-6">
+              <div className="min-w-0">
+                <h3 className="truncate text-sm font-semibold text-white sm:text-base">
+                  {selectedCertificate.title}
+                </h3>
+
+                <p className="text-xs text-mist">
+                  {selectedCertificate.issuer}
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setSelectedCertificate(null)}
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/15 text-white transition hover:bg-white/10"
+                aria-label="Close certificate"
+              >
+                <Icon name="X" size={20} />
+              </button>
+            </div>
+
+            {/* Full Certificate Image */}
+            <div className="flex min-h-0 flex-1 items-center justify-center overflow-auto bg-[#252525] p-3 sm:p-6">
+              <img
+                src={selectedCertificate.image}
+                alt={selectedCertificate.title}
+                className="max-h-[80vh] max-w-full rounded-lg object-contain"
+              />
+            </div>
+
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+/* ---------------------------- CONTACT ---------------------------- */
+
+function Contact() {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sent, setSent] = useState(false);
+
+  const subject = `Portfolio enquiry from ${form.name || "a visitor"}`;
+  const body = `${form.message}\n\nFrom: ${form.name} <${form.email}>`;
+  const mailto = `mailto:${PROFILE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  const validate = () => {
+    const e: Record<string, string> = {};
+    if (form.name.trim().length < 2) e.name = "Please enter your name.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) e.email = "Please enter a valid email address.";
+    if (form.message.trim().length < 10) e.message = "Please write at least a short message (10+ characters).";
+    setErrors(e);
+    return Object.keys(e).length === 0;
+  };
+
+  const submit = (ev: React.FormEvent) => {
+    ev.preventDefault();
+    if (!validate()) return;
+    setSent(true);
+    const a = document.createElement("a");
+    a.href = mailto;
+    a.click();
+  };
+
+  const field = "w-full rounded-xl border bg-white/[0.04] px-4 py-3 text-[15px] text-white placeholder:text-white/35 transition-colors focus:border-lilac/70 focus:bg-white/[0.07] focus:outline-none";
+  const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [k]: e.target.value });
+    if (errors[k]) setErrors({ ...errors, [k]: "" });
+  };
+
+  return (
+    <Section id="contact" eyebrow="Contact" title="Let's work together">
+      <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
+        <Reveal>
+          <div className="grid gap-4">
+            <div className="glass flex items-center gap-4 rounded-2xl p-5">
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name="Mail" size={20} /></span>
+              <div className="min-w-0 flex-1">
+                <p className="text-xs uppercase tracking-wider text-mist">Email</p>
+                <p className="truncate text-[15px] font-medium">{PROFILE.email}</p>
+              </div>
+              <button type="button" aria-label="Copy email address" onClick={() => copyText(PROFILE.email, "Email address copied.")} className="btn-ghost glass inline-flex h-10 w-10 items-center justify-center rounded-xl"><Icon name="Copy" size={16} /></button>
+            </div>
+            <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" className="glass flex items-center gap-4 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name="Linkedin" size={20} /></span>
+              <div className="min-w-0 flex-1"><p className="text-xs uppercase tracking-wider text-mist">LinkedIn</p><p className="truncate text-[15px] font-medium">sneha-waghamore</p></div>
+              <Icon name="ExternalLink" size={16} className="text-mist" />
+            </a>
+            <a href={PROFILE.leetcode} target="_blank" rel="noopener noreferrer" className="glass flex items-center gap-4 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name="Code2" size={20} /></span>
+              <div className="min-w-0 flex-1"><p className="text-xs uppercase tracking-wider text-mist">LeetCode</p><p className="truncate text-[15px] font-medium">sneha_1522</p></div>
+              <Icon name="ExternalLink" size={16} className="text-mist" />
+            </a>
+            {PROFILE.github ? (
+              <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" className="glass flex items-center gap-4 rounded-2xl p-5 transition-transform hover:-translate-y-0.5">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name="Github" size={20} /></span>
+                <div className="min-w-0 flex-1"><p className="text-xs uppercase tracking-wider text-mist">GitHub</p><p className="truncate text-[15px] font-medium">{PROFILE.github.replace("https://", "")}</p></div>
+                <Icon name="ExternalLink" size={16} className="text-mist" />
+              </a>
+            ) : (
+              <button type="button" onClick={() => toast("GitHub link isn't added yet. Add it in the CONFIG block at the top of the source.")} className="glass flex w-full items-center gap-4 rounded-2xl border-dashed p-5 text-left transition-transform hover:-translate-y-0.5">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-iris/20 text-lilac"><Icon name="Github" size={20} /></span>
+                <div className="min-w-0 flex-1"><p className="text-xs uppercase tracking-wider text-mist">GitHub</p><p className="text-[15px] font-medium text-mist">Placeholder: add your profile link</p></div>
+              </button>
+            )}
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <form onSubmit={submit} noValidate className="glass rounded-2xl p-6 sm:p-8" aria-label="Contact form">
+            {sent ? (
+              <div className="pop text-center">
+                <span className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-iris/25 text-lilac"><Icon name="CheckCircle2" size={28} /></span>
+                <h3 className="mt-4 font-display text-xl font-semibold">Your email app should open</h3>
+                <p className="mx-auto mt-2 max-w-sm text-sm text-mist">The message is filled in and addressed to {PROFILE.email}. If nothing opened, copy it and send it from your own email.</p>
+                <div className="mt-6 flex flex-wrap justify-center gap-3">
+                  <Btn icon="Copy" onClick={() => copyText(`To: ${PROFILE.email}\nSubject: ${subject}\n\n${body}`, "Message copied.")}>Copy message</Btn>
+                  <Btn variant="ghost" onClick={() => { setSent(false); setForm({ name: "", email: "", message: "" }); }}>Write another</Btn>
+                </div>
+              </div>
+            ) : (
+              <div className="grid gap-5">
+                <div>
+                  <label htmlFor="cf-name" className="mb-2 block text-sm font-medium">Name</label>
+                  <input id="cf-name" value={form.name} onChange={set("name")} autoComplete="name" placeholder="Your name" aria-invalid={!!errors.name}
+                    className={`${field} ${errors.name ? "border-rose-400/70" : "border-white/10"}`} />
+                  {errors.name && <p className="mt-1.5 text-xs text-rose-300">{errors.name}</p>}
+                </div>
+                <div>
+                  <label htmlFor="cf-email" className="mb-2 block text-sm font-medium">Email</label>
+                  <input id="cf-email" type="email" value={form.email} onChange={set("email")} autoComplete="email" placeholder="you@company.com" aria-invalid={!!errors.email}
+                    className={`${field} ${errors.email ? "border-rose-400/70" : "border-white/10"}`} />
+                  {errors.email && <p className="mt-1.5 text-xs text-rose-300">{errors.email}</p>}
+                </div>
+                <div>
+                  <label htmlFor="cf-message" className="mb-2 block text-sm font-medium">Message</label>
+                  <textarea id="cf-message" rows={5} value={form.message} onChange={set("message")} placeholder="Tell me about the role or project…" aria-invalid={!!errors.message}
+                    className={`${field} resize-y ${errors.message ? "border-rose-400/70" : "border-white/10"}`} />
+                  {errors.message && <p className="mt-1.5 text-xs text-rose-300">{errors.message}</p>}
+                </div>
+                <Btn type="submit" icon="Send" className="w-full sm:w-auto">Send message</Btn>
+                <p className="text-xs text-mist">Sending opens your email app with this message addressed to me.</p>
+              </div>
+            )}
+          </form>
+        </Reveal>
+      </div>
+    </Section>
+  );
+}
+
+/* ---------------------------- APP ---------------------------- */
+
+function Footer() {
+  return (
+    <footer className="border-t border-white/10 py-10" style={{ paddingBottom: "max(40px, env(safe-area-inset-bottom, 0px))" }}>
+      <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-mist">
+        <p>© 2026 {PROFILE.name}. Built with React, TypeScript and Tailwind CSS.</p>
+        <button type="button" onClick={() => goTo("top")} className="btn-ghost glass inline-flex min-h-[40px] items-center gap-2 rounded-xl px-4 text-[#F3F1FA]">
+          <Icon name="ArrowUp" size={16} /> Back to top
+        </button>
+      </div>
+    </footer>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <div className="bg-grid" />
+      <div className="bg-orb" style={{ width: 520, height: 520, top: -140, left: -120, background: "rgba(124,58,237,.35)" }} />
+      <div className="bg-orb" style={{ width: 460, height: 460, top: "38%", right: -160, background: "rgba(192,38,211,.18)" }} />
+      <div className="bg-orb" style={{ width: 520, height: 520, bottom: -180, left: "20%", background: "rgba(79,70,229,.22)" }} />
+      <div className="relative z-10">
+        <Navbar />
+        <main className="mx-auto max-w-6xl">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Education />
+          <Certifications />
+          <Contact />
+        </main>
+        <div className="mx-auto max-w-6xl"><Footer /></div>
+      </div>
+      <ToastHost />
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
+</script>
+
+<script>
+(function () {
+  var root = document.getElementById('root');
+  function fail(msg) {
+    root.innerHTML = '<pre style="padding:24px;color:#fca5a5;white-space:pre-wrap;font:13px/1.5 ui-monospace,monospace">' + String(msg).replace(/</g, '&lt;') + '</pre>';
+  }
+  try {
+    if (!window.Babel) throw new Error('Babel failed to load.');
+    if (!window.React || !window.ReactDOM) throw new Error('React failed to load.');
+    var src = document.getElementById('app-src').textContent;
+    var out = Babel.transform(src, {
+      filename: 'app.tsx',
+      presets: [['typescript', { isTSX: true, allExtensions: true }], 'react']
+    }).code;
+    var s = document.createElement('script');
+    s.textContent = out;
+    document.body.appendChild(s);
+  } catch (e) { fail((e && e.message) || e); }
+})();
+</script>
+
+</body></html>
