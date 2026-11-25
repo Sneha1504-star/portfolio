@@ -711,6 +711,8 @@ function Education() {
     </Section>
   );
 }
+  /* ------------------------- CERTIFICATIONS ------------------------- */
+
 function Certifications() {
   const [selectedCertificate, setSelectedCertificate] = React.useState(null);
 
@@ -726,67 +728,46 @@ function Certifications() {
             <Reveal key={c.title} delay={(i % 3) * 80}>
               <div className="glass group h-full overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-lilac/40">
 
-  {/* Certificate thumbnail */}
-  <button
-    onClick={() => setSelectedCertificate(c)}
-    className="block w-full overflow-hidden border-b border-white/10 bg-black/20 p-3"
-  >
-    <img
-      src={c.image}
-      alt={c.title}
-      className="h-40 w-full rounded-lg object-contain transition-transform duration-300 group-hover:scale-[1.03]"
-    />
-  </button>
-
-  {/* Card details */}
-  <div className="p-5">
-    <h3 className="text-lg font-semibold">{c.title}</h3>
-
-    <p className="mt-2 text-sm text-mist">{c.issuer}</p>
-
-    {c.score && (
-      <span className="mt-3 inline-block rounded-full bg-lilac/10 px-3 py-1 text-xs text-lilac">
-        {c.score}
-      </span>
-    )}
-
-    <button
-      onClick={() => setSelectedCertificate(c)}
-      className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-lilac transition hover:opacity-80"
-    >
-      View Certificate
-      <Icon name="Eye" size={15} />
-    </button>
-  </div>
-
-</div>
-                <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-lilac/10 text-lilac">
-                  <Icon name={c.icon} size={22} />
-                </span>
-
-                <h3 className="text-lg font-semibold">{c.title}</h3>
-
-                <p className="mt-2 text-sm text-mist">{c.issuer}</p>
-
-                {c.score && (
-                  <span className="mt-3 inline-block rounded-full bg-lilac/10 px-3 py-1 text-xs text-lilac">
-                    {c.score}
-                  </span>
-                )}
-
+                {/* Certificate thumbnail */}
                 <button
                   onClick={() => setSelectedCertificate(c)}
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-lilac transition hover:opacity-80"
+                  className="block w-full overflow-hidden border-b border-white/10 bg-black/20 p-3"
                 >
-                  View Certificate
-                  <Icon name="Eye" size={15} />
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    className="h-40 w-full rounded-lg object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
                 </button>
+
+                {/* Card details */}
+                <div className="p-5">
+                  <h3 className="text-lg font-semibold">{c.title}</h3>
+
+                  <p className="mt-2 text-sm text-mist">{c.issuer}</p>
+
+                  {c.score && (
+                    <span className="mt-3 inline-block rounded-full bg-lilac/10 px-3 py-1 text-xs text-lilac">
+                      {c.score}
+                    </span>
+                  )}
+
+                  <button
+                    onClick={() => setSelectedCertificate(c)}
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-lilac transition hover:opacity-80"
+                  >
+                    View Certificate
+                    <Icon name="Eye" size={15} />
+                  </button>
+                </div>
+
               </div>
             </Reveal>
           ))}
         </div>
       </Section>
 
+      {/* Full-size certificate popup */}
       {selectedCertificate && (
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6"
@@ -802,6 +783,7 @@ function Certifications() {
                 <h3 className="truncate text-sm font-semibold text-white sm:text-base">
                   {selectedCertificate.title}
                 </h3>
+
                 <p className="text-xs text-mist">
                   {selectedCertificate.issuer}
                 </p>
