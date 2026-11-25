@@ -728,8 +728,9 @@ function Certifications() {
             <Reveal key={c.title} delay={(i % 3) * 80}>
               <div className="glass group h-full overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-lilac/40">
 
-                {/* Certificate thumbnail */}
+                {/* Certificate Thumbnail */}
                 <button
+                  type="button"
                   onClick={() => setSelectedCertificate(c)}
                   className="block w-full overflow-hidden border-b border-white/10 bg-black/20 p-3"
                 >
@@ -740,11 +741,15 @@ function Certifications() {
                   />
                 </button>
 
-                {/* Card details */}
+                {/* Certificate Details */}
                 <div className="p-5">
-                  <h3 className="text-lg font-semibold">{c.title}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {c.title}
+                  </h3>
 
-                  <p className="mt-2 text-sm text-mist">{c.issuer}</p>
+                  <p className="mt-2 text-sm text-mist">
+                    {c.issuer}
+                  </p>
 
                   {c.score && (
                     <span className="mt-3 inline-block rounded-full bg-lilac/10 px-3 py-1 text-xs text-lilac">
@@ -753,6 +758,7 @@ function Certifications() {
                   )}
 
                   <button
+                    type="button"
                     onClick={() => setSelectedCertificate(c)}
                     className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-lilac transition hover:opacity-80"
                   >
@@ -767,7 +773,7 @@ function Certifications() {
         </div>
       </Section>
 
-      {/* Full-size certificate popup */}
+      {/* Certificate Modal */}
       {selectedCertificate && (
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6"
@@ -777,7 +783,7 @@ function Certifications() {
             className="relative flex max-h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#111118] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
+            {/* Modal Header */}
             <div className="flex items-center justify-between gap-4 border-b border-white/10 px-4 py-3 sm:px-6">
               <div className="min-w-0">
                 <h3 className="truncate text-sm font-semibold text-white sm:text-base">
@@ -790,6 +796,7 @@ function Certifications() {
               </div>
 
               <button
+                type="button"
                 onClick={() => setSelectedCertificate(null)}
                 className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/15 text-white transition hover:bg-white/10"
                 aria-label="Close certificate"
@@ -798,7 +805,7 @@ function Certifications() {
               </button>
             </div>
 
-            {/* Certificate image */}
+            {/* Full Certificate Image */}
             <div className="flex min-h-0 flex-1 items-center justify-center overflow-auto bg-[#252525] p-3 sm:p-6">
               <img
                 src={selectedCertificate.image}
@@ -806,6 +813,7 @@ function Certifications() {
                 className="max-h-[80vh] max-w-full rounded-lg object-contain"
               />
             </div>
+
           </div>
         </div>
       )}
